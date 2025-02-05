@@ -5,7 +5,9 @@
 package controlador;
 import java.sql.*;
 import modelo.Equipo;
-import modelo.Equipo.Reconectador;
+import modelo.Reconectador;
+
+
 
 /**
  *
@@ -47,7 +49,7 @@ public class controladorEquipo {
             stmt.setString(2, reconectador.getModelo());
             stmt.setString(3, reconectador.getMarca());
             stmt.setDouble(4, reconectador.getVoltaje());
-            stmt.setString(5, reconectador.getDistrubuidor());
+        
 
             stmt.executeUpdate();
             System.out.println("Reconectador guardado correctamente.");
